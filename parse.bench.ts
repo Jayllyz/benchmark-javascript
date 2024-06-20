@@ -100,12 +100,12 @@ test("parseAccept2 should decide language by Accept-Language header", () => {
 });
 
 describe("Benchmark functions", () => {
-  bench("parseAccept1", () => {
+  bench("With spread operator", () => {
     parseAccept1(acceptHeader1);
     parseAccept1(acceptHeader2);
   });
 
-  bench("parseAccept2", () => {
+  bench("Without spread operator", () => {
     parseAccept2(acceptHeader1);
     parseAccept2(acceptHeader2);
   });
