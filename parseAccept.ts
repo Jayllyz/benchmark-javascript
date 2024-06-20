@@ -6,7 +6,7 @@ export interface Accept {
     q: number;
   }
   
-  // Solution 1 : without spread operator
+  // Solution 1 : with spread operator
   export const parseAccept1 = (acceptHeader: string): Accept[] => {
     const accepts = acceptHeader.split(',');
     return accepts.map((accept) => {
@@ -23,7 +23,7 @@ export interface Accept {
     });
   };
   
- // Solution 2 : with spread operator
+ // Solution 2 : without spread operator
   export const parseAccept2 = (acceptHeader: string): Accept[] => {
     const accepts = acceptHeader.split(',');
     return accepts.map((accept) => {
