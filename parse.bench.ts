@@ -99,7 +99,7 @@ test("parseAccept2 should decide language by Accept-Language header", () => {
   expect(matched).toEqual({ type: "en-US", params: {}, q: 1 });
 });
 
-describe("Short Benchmark", () => {
+describe("Benchmark functions", () => {
   bench("parseAccept1", () => {
     parseAccept1(acceptHeader1);
     parseAccept1(acceptHeader2);
@@ -108,21 +108,5 @@ describe("Short Benchmark", () => {
   bench("parseAccept2", () => {
     parseAccept2(acceptHeader1);
     parseAccept2(acceptHeader2);
-  });
-});
-
-describe("Long Benchmark", () => {
-  bench("parseAccept1 with 1000 iterations", () => {
-    for (let i = 0; i < 1000; i++) {
-      parseAccept1(acceptHeader1);
-      parseAccept1(acceptHeader2);
-    }
-  });
-
-  bench("parseAccept2 with 1000 iterations", () => {
-    for (let i = 0; i < 1000; i++) {
-      parseAccept2(acceptHeader1);
-      parseAccept2(acceptHeader2);
-    }
   });
 });
