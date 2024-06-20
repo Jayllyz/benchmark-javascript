@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "vitest"
+    "bench": "vitest bench",
+    "lint:fix": "biome check --fix",
+    "ci": "biome ci"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.8.2",
     "@types/node": "^20.14.6",
     "vitest": "^1.6.0"
   },
