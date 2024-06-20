@@ -1,0 +1,12 @@
+{
+  "name": "perf-accept-header",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.6",
+    "vitest": "^1.6.0"
+  }
+}
