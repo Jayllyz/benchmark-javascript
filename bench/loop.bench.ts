@@ -74,18 +74,6 @@ describe("Loop Benchmarks", () => {
     expect(count).toBe(ITERATIONS);
   });
 
-  bench("recursion", () => {
-    let count = 0;
-    const recurse = (n: number) => {
-      if (n > 0) {
-        count++;
-        recurse(n - 1);
-      }
-    };
-    recurse(ITERATIONS);
-    expect(count).toBe(ITERATIONS);
-  });
-
   bench("reduce", () => {
     let count = 0;
     testArray.reduce(() => {
