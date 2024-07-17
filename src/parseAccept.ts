@@ -1,5 +1,3 @@
-// parseAccept.ts
-
 export interface Accept {
   type: string;
   params: Record<string, string>;

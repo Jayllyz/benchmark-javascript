@@ -1,7 +1,7 @@
 // parseAccept.test.ts
 
 import { bench, describe, expect, test } from "vitest";
-import { parseAccept1, parseAccept2 } from "./parseAccept";
+import { parseAccept1, parseAccept2 } from "../src/parseAccept";
 
 const acceptHeader1 = `
   text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8;level=1;foo=bar,
