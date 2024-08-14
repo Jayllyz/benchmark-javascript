@@ -83,9 +83,8 @@ describe("Loop Benchmarks", () => {
   });
 });
 
-
-describe('Loop Benchmarks with length calculation', () => {
-  bench('for loop with .length in condition', () => {
+describe("Loop Benchmarks with length calculation", () => {
+  bench("for loop with .length in condition", () => {
     let count = 0;
     for (let i = 0; i < testArray.length; i++) {
       count++;
@@ -93,7 +92,7 @@ describe('Loop Benchmarks with length calculation', () => {
     expect(count).toBe(ITERATIONS);
   });
 
-  bench('for loop with .length outside condition', () => {
+  bench("for loop with .length outside condition", () => {
     let count = 0;
     const length = testArray.length;
     for (let i = 0; i < length; i++) {
@@ -101,4 +100,4 @@ describe('Loop Benchmarks with length calculation', () => {
     }
     expect(count).toBe(ITERATIONS);
   });
-})
+});

@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
-    "@types/node": "^20.14.13",
+    "@types/node": "^20.14.15",
     "vitest": "^2.0.5"
   },
   "packageManager": "pnpm@9.7.0"
