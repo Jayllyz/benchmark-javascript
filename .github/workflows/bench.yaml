@@ -72,5 +72,5 @@ jobs:
         run: deno install --allow-scripts
 
       - name: Run benchmarks
-        run: deno run bench
+        run: deno task bench
 
