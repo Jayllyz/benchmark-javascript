@@ -64,9 +64,12 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Setup Deno
-        uses: denoland/setup-deno@v1
+        uses: denoland/setup-deno@v2
         with:
           deno-version: vx.x.x
+
+      - name: Install dependencies
+        run: deno install --allow-scripts
 
       - name: Run benchmarks
         run: deno task bench
