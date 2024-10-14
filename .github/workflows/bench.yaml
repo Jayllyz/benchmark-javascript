@@ -69,7 +69,7 @@ jobs:
           deno-version: vx.x.x
 
       - name: Install dependencies
-        run: deno install
+        run: deno install --allow-scripts
 
       - name: Run benchmarks
         run: deno run bench
