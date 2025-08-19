@@ -33,7 +33,6 @@ describe("Loop Benchmarks", () => {
 
   bench("forEach loop", () => {
     let count = 0;
-    // biome-ignore lint/complexity/noForEach: This is a benchmark
     testArray.forEach(() => {
       count++;
     });

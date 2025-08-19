@@ -21,7 +21,7 @@ function NumberIsInteger(n: number): boolean {
 describe("ParseInt Benchmarks", () => {
   bench("parseInt", () => {
     const val = "4";
-    const result = Number.parseInt(val);
+    const result = Number.parseInt(val, 10);
     expect(result).toBe(4);
   });
 
@@ -33,7 +33,9 @@ describe("ParseInt Benchmarks", () => {
 
   bench("parseInt with check if integer", () => {
     const val = 4.5;
-    const result = NumberIsInteger(val) ? val : Number.parseInt(val.toString());
+    const result = NumberIsInteger(val)
+      ? val
+      : Number.parseInt(val.toString(), 10);
     expect(result).toBe(4);
   });
 

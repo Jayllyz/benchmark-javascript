@@ -30,7 +30,7 @@ describe("Conditions Benchmarks", () => {
       if (
         item.length === 6 &&
         item.slice(0, 3).toUpperCase() === item.slice(0, 3) &&
-        !Number.isNaN(Number.parseInt(item.slice(3)))
+        !Number.isNaN(Number.parseInt(item.slice(3), 10))
       ) {
         return true;
       }
@@ -42,7 +42,7 @@ describe("Conditions Benchmarks", () => {
     dataSet.filter((item) => {
       if (item.length === 6) {
         if (item.slice(0, 3).toUpperCase() === item.slice(0, 3)) {
-          if (!Number.isNaN(Number.parseInt(item.slice(3)))) {
+          if (!Number.isNaN(Number.parseInt(item.slice(3), 10))) {
             return true;
           }
         }
@@ -58,7 +58,7 @@ describe("Conditions Benchmarks", () => {
         case "XYZ":
         case "QWE":
         case "ZXC":
-          return !Number.isNaN(Number.parseInt(item.slice(3)));
+          return !Number.isNaN(Number.parseInt(item.slice(3), 10));
         default:
           return false;
       }
@@ -69,7 +69,7 @@ describe("Conditions Benchmarks", () => {
     dataSet.filter((item) =>
       item.length === 6
         ? item.slice(0, 3).toUpperCase() === item.slice(0, 3)
-          ? !Number.isNaN(Number.parseInt(item.slice(3)))
+          ? !Number.isNaN(Number.parseInt(item.slice(3), 10))
           : false
         : false,
     );

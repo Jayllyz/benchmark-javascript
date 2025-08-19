@@ -11,6 +11,9 @@
       "recommended": true,
       "performance": {
         "noAccumulatingSpread": "off"
+      },
+      "suspicious": {
+        "useIterableCallbackReturn": "off"
       }
     }
   }
